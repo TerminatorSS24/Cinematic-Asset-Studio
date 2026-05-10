@@ -1,0 +1,13 @@
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Spring Boot / Java
+demo/target/
+demo/.mvn/
+*.jar
+*.class
+
+# IDEs
+.vscode/
+.idea/
