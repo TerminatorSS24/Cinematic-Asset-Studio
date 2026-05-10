@@ -18,7 +18,7 @@ import com.example.demo.repositories.PromptRepository;
 
 @RestController
 @RequestMapping("/api/assets")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://cinematic-asset-studio.vercel.app")
 public class AssetController {
 
     @Autowired
