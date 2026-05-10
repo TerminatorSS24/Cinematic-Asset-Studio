@@ -25,7 +25,7 @@ function App() {
   );
 
   const fetchAssets = () => {
-    fetch('http://localhost:8080/api/assets')
+    fetch('https://cinematic-asset-studio.onrender.com/api/assets')
       .then(res => res.json())
       .then(data => setAssets(data))
       .catch(err => console.error(err));
@@ -38,7 +38,7 @@ function App() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     
-    const url = editingId ? `http://localhost:8080/api/assets/${editingId}` : 'http://localhost:8080/api/assets';
+    const url = editingId ? `https://cinematic-asset-studio.onrender.com/api/assets/${editingId}` : 'https://cinematic-asset-studio.onrender.com/api/assets';
     const method = editingId ? 'PUT' : 'POST';
 
     fetch(url, {
@@ -57,7 +57,7 @@ function App() {
 
   const handleDelete = (id: number | undefined) => {
     if (!id) return;
-    fetch(`http://localhost:8080/api/assets/${id}`, {
+    fetch(`https://cinematic-asset-studio.onrender.com/api/assets/${id}`, {
       method: 'DELETE',
     })
     .then(() => fetchAssets())
